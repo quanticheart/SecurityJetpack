@@ -3,11 +3,12 @@ package com.quanticheart.secret
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.quanticheart.security.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    private val file by lazy { file() }
+    private val file by lazy { createFile() }
 
     private val encKey = "ENCRYPT_KEY"
     private val fileUrl =

@@ -1,2 +1,3 @@
 rootProject.name = "Secret"
 include ':app'
+include ':security'

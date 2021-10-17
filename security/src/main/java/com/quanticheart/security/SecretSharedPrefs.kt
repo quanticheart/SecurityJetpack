@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.quanticheart.secret
+package com.quanticheart.security
 
 import android.content.Context
 import android.content.SharedPreferences

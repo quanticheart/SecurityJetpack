@@ -1,4 +1,4 @@
-package com.quanticheart.secret
+package com.quanticheart.security
 
 import android.app.Activity
 import android.util.Log
@@ -32,10 +32,10 @@ fun Activity.downloadAndEncrypt(url: String, callback: (status: Boolean, msg: St
             runOnUiThread {
                 var encryptedOutputStream: FileOutputStream? = null
                 try {
-                    encryptedOutputStream = encryptFile(file()).openFileOutput().apply {
+                    encryptedOutputStream = encryptFile(createFile()).openFileOutput().apply {
                         write(it.file)
                     }
-                    callback(true, getString(R.string.file_downloaded))
+                    callback(true, "ok")
                 } catch (e: Exception) {
                     callback(false, e.message ?: "Error")
                 } finally {
@@ -51,7 +51,7 @@ fun Activity.downloadAndEncrypt(url: String, callback: (status: Boolean, msg: St
 fun deleteFile(file: File, callback: (status: Boolean) -> Unit) {
     var success = false
     if (file.exists()) {
-        success = file().delete()
+        success = createFile().delete()
     }
     callback(success)
 }
