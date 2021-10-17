@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
 
     private val encKey = "ENCRYPT_KEY"
     private val fileUrl =
-        ""
+        "https://raw.githubusercontent.com/quanticheart/SecurityJetpack/master/README.md"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
