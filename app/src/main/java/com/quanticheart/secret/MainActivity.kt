@@ -43,7 +43,8 @@ class MainActivity : AppCompatActivity() {
 
         fileDecrypt.setOnClickListener {
             openFileInputStream({
-                encryptFile(file).openFileInput()
+              val f =  encryptFile(file)
+                f.openFileInput()
             }, {
                 result.text
             })
